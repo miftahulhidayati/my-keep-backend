@@ -1,0 +1,31 @@
+@BASE_URL=http://localhost:8081
+@JWT_TOKEN=abc
+###
+GET {{BASE_URL}}/ping 
+###
+GET {{BASE_URL}}/notes/0202c34a-e6bc-11eb-9a1d-a85e4537ab5a
+###
+GET {{BASE_URL}}/notes
+###
+GET {{BASE_URL}}/sign-in
+
+###
+POST {{BASE_URL}}/notes 
+Content-Type: application/json
+
+{
+    "title":"Week 05",
+    "content": "Belajar PostgreSQL",
+    "color": "yellow"
+}
+
+###
+PUT  {{BASE_URL}}/notes 
+Content-Type: application/json
+
+{
+    "id": "4193b22f-ec42-11eb-8346-a85e4537ab5a",
+    "title":"Belanja Mingguan",
+    "content": "Belanja Sayur dan Buah",
+    "color": "red"
+}
